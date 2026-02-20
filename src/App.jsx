@@ -8,21 +8,16 @@ import WorkExperience from './components/work_experience';
 import Education from './components/eduation';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [edit, setEdit] = useState(true);
   return (
     <>
-      <header id="header">
-        <Header />
-      </header>
-      <body>
+        <Header edit={edit} setEdit={setEdit}/>
         <BreakLine />
-        <PersonalDetails />
+        <PersonalDetails edit={edit}/>
         <BreakLine />
         <WorkExperience />
         <BreakLine />
         <Education />
-      </body>
     </>
   )
 }

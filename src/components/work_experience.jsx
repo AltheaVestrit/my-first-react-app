@@ -1,6 +1,7 @@
 import Card from "./card";
+import { useState } from "react";
 
-let jobs = [
+let jobList = [
     {
         id: 1,
         startYear: 2015,
@@ -38,9 +39,13 @@ let jobs = [
 ]
 
 function WorkExperience() {
+    const [jobs, setJobs] = useState(jobList);
     return (
         <div>
-            <h2>Work Experience</h2>
+            <div className="header">
+                <h2>Work Experience</h2>
+                <div className="headerButtonGroup"><button className="blueBg" type="button">Add job</button></div>
+            </div>
             {jobs.map((job) => Card(job))}
         </div>
     )

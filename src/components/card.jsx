@@ -16,7 +16,7 @@ function Card(job) {
             <p className="left">{`${job.startYear} - ${job.endYear}`}</p>
             <div>
                 <p className="bold">{job.title}</p>
-                <p className="it">{job.place}</p>
+                <p className="em">{job.place}</p>
                 {cardDescription(job.description)}
             </div>
         </div>

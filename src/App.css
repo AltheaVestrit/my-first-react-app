@@ -18,6 +18,11 @@ p {
   margin: 0.3em;
 }
 
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .gridParent {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -34,7 +39,7 @@ p {
   font-weight: 600;
 }
 
-.it {
+.em {
   font-style: italic;
 }
 
@@ -47,4 +52,46 @@ p {
 ul {
   margin: 0;
   padding-left: 3ch;
+}
+
+input {
+  border-radius: 3px;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  padding: 0.35rem;
+  border: 1px solid #c8cacc;
+  outline-color: rgba(0, 123, 255, .25);
+}
+
+.headerButtonGroup {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+button {
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: #ECF3FF;
+  min-width: 10ch;
+  font-size: 1.05rem;
+  padding: 0.3lh 0;
+}
+
+.blueBg {
+  background-color: #0d6efd;
+}
+.greenBg {
+  background-color: #198754;
+}
+
+button:disabled {
+  opacity: 0.5; 
+  cursor: 'not-allowed';
+  pointer-events: none;
+}
+
+input[type="text"]:disabled {
+  color: inherit;
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0);
 }
