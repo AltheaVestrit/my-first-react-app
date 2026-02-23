@@ -32,6 +32,7 @@ p {
 .left {
   text-align: right;
   margin-right: 2rem;
+  margin-top: 0;
   font-weight: 320;
 }
 
@@ -54,12 +55,14 @@ ul {
   padding-left: 3ch;
 }
 
-input {
+input, textarea {
   border-radius: 3px;
-  margin: 0.25rem 0.5rem 0.25rem 0;
+  margin: 0.1rem 0;
   padding: 0.35rem;
   border: 1px solid #c8cacc;
   outline-color: rgba(0, 123, 255, .25);
+  font: inherit;
+  field-sizing: content;
 }
 
 .headerButtonGroup {
@@ -70,18 +73,20 @@ input {
 
 button {
   display: inline-block;
-  margin: 0 0.5rem;
-  color: #ECF3FF;
-  min-width: 10ch;
+  margin: 0.5rem 0 0 0.5rem;
+  color: #ffffff;
+  min-width: 11ch;
   font-size: 1.05rem;
   padding: 0.3lh 0;
 }
-
 .blueBg {
   background-color: #0d6efd;
 }
 .greenBg {
   background-color: #198754;
+}
+.redBg {
+  background-color: #dc3545;
 }
 
 button:disabled {
@@ -90,8 +95,18 @@ button:disabled {
   pointer-events: none;
 }
 
-input[type="text"]:disabled {
+input:disabled, textarea:disabled {
   color: inherit;
   background-color: rgba(255,255,255,0);
   border-color: rgba(255,255,255,0);
+  resize: none;
+}
+
+.block {
+  display: block;
+}
+
+.label {
+  margin-top: 0.1rem;
+  padding: 0.35rem;
 }

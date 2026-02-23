@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function Header({edit, setEdit}) {
  return (
     <div className="header">
@@ -9,7 +7,7 @@ function Header({edit, setEdit}) {
       <button type="button" className="greenBg" id="submitBtn" disabled={!edit} onClick={() => setEdit(false)}>Submit</button>
     </div>
     </div>
- )
-}
+ );
+};
 
 export default Header;
